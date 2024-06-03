@@ -133,7 +133,13 @@ def main():
 
     # Отрисовка всех многоугольников
     plot_polygons(subject_polygon, clip_polygon, clipped_polygon)
+    clipped_polygon = sutherland_hodgman(subject_polygon, clip_polygon)
+
 
 
 if __name__ == "__main__":
     main()
+
+
+
+#https://docs.scipy.org/doc/scipy/reference/generated/scipy.spatial.ConvexHull.html#scipy.spatial.ConvexHull
